@@ -1,6 +1,6 @@
 Name: xsetroot
-Version: 1.0.1
-Release: %mkrel 3
+Version: 1.0.2
+Release: %mkrel 1
 Summary: Root window parameter setting utility for X
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
@@ -35,6 +35,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/xsetroot
-%{_mandir}/man1/xsetroot.1x.bz2
+%{_mandir}/man1/xsetroot.1*
 
 
