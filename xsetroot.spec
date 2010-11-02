@@ -1,5 +1,5 @@
 Name:		xsetroot
-Version:	1.0.3
+Version:	1.1.0
 Release:	%mkrel 1
 Summary:	Root window parameter setting utility for X
 Group:		Development/X11
