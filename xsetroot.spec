@@ -11,7 +11,7 @@ BuildRequires: libx11-devel >= 1.0.0
 BuildRequires: libxmu-devel >= 1.0.0
 BuildRequires: x11-data-bitmaps >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
-BuildRequires: x11-data-cursor-themes
+BuildRequires: libxcursor-devel
 
 %description
 The setroot program allows to tailor the appearance of the background
