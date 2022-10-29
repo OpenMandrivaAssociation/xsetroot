@@ -1,17 +1,16 @@
 Name:		xsetroot
-Version:	1.1.2
-Release:	2
+Version:	1.1.3
+Release:	1
 Summary:	Root window parameter setting utility for X
 Group:		Development/X11
-Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 License:	MIT
 
-BuildRequires: pkgconfig(x11) >= 1.0.0
-BuildRequires: pkgconfig(xmu) >= 1.0.0
-BuildRequires: x11-data-bitmaps >= 1.0.1
-BuildRequires: x11-util-macros >= 1.0.1
-BuildRequires: pkgconfig(xcursor)
-BuildRequires: pkgconfig(xbitmaps)
+BuildRequires:	pkgconfig(x11) >= 1.0.0
+BuildRequires:	pkgconfig(xmu) >= 1.0.0
+BuildRequires:	pkgconfig(xorg-macros)
+BuildRequires:	pkgconfig(xcursor)
+BuildRequires:	pkgconfig(xbitmaps)
 
 %description
 The setroot program allows to tailor the appearance of the background
@@ -21,8 +20,9 @@ The setroot program allows to tailor the appearance of the background
 %autosetup -p1
 
 %build
-%configure	--x-includes=%{_includedir} \
-		--x-libraries=%{_libdir}
+%configure \
+	--x-includes=%{_includedir} \
+	--x-libraries=%{_libdir}
 
 %make_build
 
@@ -31,4 +31,4 @@ The setroot program allows to tailor the appearance of the background
 
 %files
 %{_bindir}/xsetroot
-%{_mandir}/man1/xsetroot.1*
+%doc %{_mandir}/man1/xsetroot.1*
